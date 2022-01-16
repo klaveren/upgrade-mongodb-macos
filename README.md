@@ -6,46 +6,62 @@ The referenced docs:
 
 ## Check Compatibility Version
 
-```db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )```
+```
+db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
+```
 
 - The operation should return a result that includes "featureCompatibilityVersion" : { "version" : "4.4" }.
 
 To set or update featureCompatibilityVersion, run the following command:
 
-```db.adminCommand( { setFeatureCompatibilityVersion: "4.4" } )```
+```
+db.adminCommand( { setFeatureCompatibilityVersion: "4.4" } )
+```
 
-## stop mongodb services
+## Stop MongoDB Services
 
-```brew services stop mongodb/brew/mongodb-community@4.4```
+```
+brew services stop mongodb/brew/mongodb-community@4.4
+```
 
-## Create database backup
+## Create Database Backup
 
-```mkdir ~/backupdb```
-```cp -av /usr/local/var/mongodb ./backupdb```
+```
+mkdir ~/backupdb
+cp -av /usr/local/var/mongodb ./backupdb
+```
 
-## Download mongodb binaries
+## Download MongoDB 5 Binaries
 
 https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-5.0.5.tgz
 - Extract files...
 
-## Replace mongodb binaries
+## Replace MongoDB 4.4 Binaries
 
-```mv /usr/local/opt/mongodb-community@4.4/bin /usr/local/opt/mongodb-community@4.4/bin-org```
-```mkdir /usr/local/opt/mongodb-community@4.4/bin```
-```cp -av ~/Downloads/mongodb-macos-x86_64-5.0.5/bin /usr/local/opt/mongodb-community@4.4/bin```
+```
+mv /usr/local/opt/mongodb-community@4.4/bin /usr/local/opt/mongodb-community@4.4/bin-org
+mkdir /usr/local/opt/mongodb-community@4.4/bin
+cp -av ~/Downloads/mongodb-macos-x86_64-5.0.5/bin /usr/local/opt/mongodb-community@4.4/bin
+```
 
-## Restart mongodb services
+## Start MongoDB Services
 
-```brew services start mongodb/brew/mongodb-community@4.4```
+```
+brew services start mongodb/brew/mongodb-community@4.4
+```
 
-## Enable mongodb 5.0 features
+## Enable MongoDB 5.0 Features
 
-```db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } ) ```
+```
+db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } ) 
+```
 
-## Install mongodb5
+## Install Mongodb5
 
-```brew services stop mongodb/brew/mongodb-community@4.4 ```
-```brew install mongodb-community```
+```
+brew services stop mongodb/brew/mongodb-community@4.4
+brew install mongodb-community
+```
 
 ## Uninstall Mongodb 4.4
 
