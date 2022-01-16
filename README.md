@@ -10,7 +10,7 @@ The referenced docs:
 db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
 ```
 
-The operation should return a result that includes:
+The operation should return a result that includes:\
 _"featureCompatibilityVersion" : { "version" : "4.4" }._
 
 
