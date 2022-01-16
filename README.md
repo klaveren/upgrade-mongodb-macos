@@ -62,6 +62,7 @@ db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } )
 ```
 brew services stop mongodb/brew/mongodb-community@4.4
 brew install mongodb-community
+brew services start mongodb/brew/mongodb-community
 ```
 
 ## Uninstall MongoDB 4.4
