@@ -10,7 +10,7 @@ The referenced docs:
 db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
 ```
 
-The operation should return a result that includes /"featureCompatibilityVersion" : { "version" : "4.4" }/.
+The operation should return a result that includes: ** "featureCompatibilityVersion" : { "version" : "4.4" }**.
 
 To set or update featureCompatibilityVersion, run the following command:
 
@@ -18,7 +18,7 @@ To set or update featureCompatibilityVersion, run the following command:
 db.adminCommand( { setFeatureCompatibilityVersion: "4.4" } )
 ```
 
-## Stop MongoDB Services
+## Stop MongoDB 4.4 Services
 
 ```
 brew services stop mongodb/brew/mongodb-community@4.4
@@ -31,12 +31,12 @@ mkdir ~/backupdb
 cp -av /usr/local/var/mongodb ./backupdb
 ```
 
-## Download MongoDB 5 Binaries
+## Download MongoDB 5.0 Binaries
 
 https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-5.0.5.tgz
 - Extract files...
 
-## Replace MongoDB 4.4 Binaries
+## Replace MongoDB 4.4 Binaries with MongoDB 5.0 Binaries
 
 ```
 mv /usr/local/opt/mongodb-community@4.4/bin /usr/local/opt/mongodb-community@4.4/bin-org
@@ -50,20 +50,20 @@ cp -av ~/Downloads/mongodb-macos-x86_64-5.0.5/bin /usr/local/opt/mongodb-communi
 brew services start mongodb/brew/mongodb-community@4.4
 ```
 
-## Enable MongoDB 5.0 Features
+## Enable MongoDB 5.0 Compatibility Features
 
 ```
 db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } ) 
 ```
 
-## Install Mongodb5
+## Install MongoDB 5.0
 
 ```
 brew services stop mongodb/brew/mongodb-community@4.4
 brew install mongodb-community
 ```
 
-## Uninstall Mongodb 4.4
+## Uninstall MongoDB 4.4
 
 ```brew uninstall mongodb/brew/mongodb-community@4.4```
 
