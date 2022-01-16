@@ -1,5 +1,5 @@
 # How to Upgrade MongoDB 4.4 to 5.0 On Mac OS Monterey
-This is a Simple Way, step by step how upgrade MongoDB 4.4 to MongoDB 5.0 on MacOS.
+This is a Simple Way, step by step how to upgrade MongoDB 4.4 to MongoDB 5.0 on MacOS.
 
 The referenced docs: 
 👉 https://docs.mongodb.com/manual/release-notes/5.0-upgrade-standalone/#std-label-5.0-upgrade-standalone
@@ -12,7 +12,6 @@ db.adminCommand( { getParameter: 1, featureCompatibilityVersion: 1 } )
 
 The operation should return a result that includes:\
 _"featureCompatibilityVersion" : { "version" : "4.4" }._
-
 
 To set or update featureCompatibilityVersion, run the following command:
 
